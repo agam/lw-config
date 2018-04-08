@@ -21,7 +21,7 @@
 
 
 ;; add Sources/ directory to quicklisp local directories
-(push (pathname #+:MSWINDOWS "C:/Sources/lisp" #-:MSWINDOWS "~/Sources/lisp") ql:*local-project-directories*)
+(push (pathname #+:MSWINDOWS "C:/Sources/lisp" #-:MSWINDOWS "~/Lisp") ql:*local-project-directories*)
 
 ;; update list of QuickLisp projects
 (ql:register-local-projects)
@@ -121,7 +121,7 @@
                        #+:MSWINDOWS "C:/" #-:MSWINDOWS(user-homedir-pathname)))
 
 (let ((lw-project
-	   (merge-pathnames "Sources/lisp/lw-project/lw-project.lisp"
+	   (merge-pathnames "Lisp/myproject/myproject.lisp"
 						#+:MSWINDOWS "C:/" #-:MSWINDOWS (user-homedir-pathname))))
   (when (fad:file-exists-p lw-project)
 	(load lw-project)))
